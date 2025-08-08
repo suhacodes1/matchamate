@@ -1,0 +1,32 @@
+datasource db {
+  provider = "sqlite" 
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Cafe {
+  id          Int       @id @default(autoincrement())
+  name        String
+  suburb      String
+  rating      Float
+  tags        String
+  mapLink     String
+  description String
+  comments    Comment[]
+}
+
+
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  text      String
+  rating    Int
+  user      String    // ← make sure this line exists
+  cafeId    Int
+  cafe      Cafe      @relation(fields: [cafeId], references: [id])
+  createdAt DateTime  @default(now())
+}
+
