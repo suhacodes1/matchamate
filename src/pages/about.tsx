@@ -4,7 +4,6 @@ import {
   Text,
   VStack,
   Container,
-  Image,
   Divider,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -15,7 +14,7 @@ const AboutPage = () => {
 
   return (
     <Box bg={bgColor} minH="100vh" py={16}>
-      <Container maxW="5xl"> {/* ⬅️ Wider container */}
+      <Container maxW="5xl"> 
         <VStack spacing={10} align="center" textAlign="center">
   
           <Heading size="2xl" color="green.700">

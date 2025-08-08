@@ -3,21 +3,23 @@ import { useEffect, useState } from "react";
 import { Box, Text, VStack, Heading, Divider } from "@chakra-ui/react";
 import { cafes } from "../../data/cafes";
 import RatingSection from "../../components/RatingSection"; 
+import { Cafe } from "../../data/cafes";
 
 const CafePage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const [cafe, setCafe] = useState<any>(null);
 
-  const [userRating, setUserRating] = useState(0);
-const [commentText, setCommentText] = useState("");
+
+const [cafe, setCafe] = useState<Cafe | null>(null);
+
 
 
 
   useEffect(() => {
     if (id) {
       const found = cafes.find((c) => c.id === parseInt(id as string));
-      setCafe(found);
+      setCafe(found ?? null);
+
     }
   }, [id]);
 
