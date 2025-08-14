@@ -67,7 +67,7 @@ const reviews = [
     {
     title: "Nana's Green Tea – 7/10",
     content:
-      "A bit on the pricey end but the matcha chocolatte latte was reallyyy good. The matcha cheesecake was really rich in matcha as well. The mochi however in the drinks were bland and too doughy",
+      "A bit on the pricey end but the matcha chocolatte latte was reallyyy good. The matcha cheesecake was really rich in matcha as well. The mochi however in the drinks were bland and too doughy.",
   },
 ];
 
